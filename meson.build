@@ -38,7 +38,7 @@ config_h.set('_GNU_SOURCE', '1')
 # Dependencies
 pkgconfig = import('pkgconfig')
 dep_lm = cc.find_library('m')
-dep_rt = cc.find_library('rt')
+dep_rt = cc.find_library('rt', required: false)
 
 input_h = dir_root / 'include' / 'linux' / host_machine.system() / 'input.h'
 input_event_codes_h = dir_root / 'include' / 'linux' / host_machine.system() / 'input-event-codes.h'
